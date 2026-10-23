@@ -19,38 +19,60 @@ def add_chunks(
         collection = get_collection()
 
     collection.upsert(
-        ids=[f"{chunk['source']}_{chunk['chunk_index']}" for chunk in chunks],
+        ids=[f"{chunk['file_hash']}_{chunk['chunk_index']}" for chunk in chunks],
         embeddings=embeddings,
         documents=[chunk["text"] for chunk in chunks],
-        metadatas=[{key: value for key, value in chunk.items() if key != "text"} for chunk in chunks]
+        metadatas=[
+            {key: value for key, value in chunk.items() if key != "text"}
+            for chunk in chunks
+        ],
     )
 
 
+def is_indexed(collection: chromadb.Collection, file_hash: str, source: str) -> bool:
+    """
+    Check if a file is already indexed in the collection by its hash and source.
 
-if __name__ == "__main__":
-    from loaders import load_file
-    from pathlib import Path
-    from chunker import chunk_pages
-    from embeddings import embed
+    Args:
+        collection (chromadb.Collection): The ChromaDB collection.
+        file_hash (str): The SHA256 hash of the file.
+        source (str): The source name of the file.
 
-    collection = get_collection()
-    print(f"Collection '{COLLECTION_NAME}' has {collection.count()} documents.")
+    Returns:
+        bool: True if the file is indexed, False otherwise.
+    """
 
-    for file in Path("docs").iterdir():
-        try:
-            pages = load_file(file)
-        except ValueError as error:
-            print(f"Skipping {file.name}: {error}")
-            continue
+    result = collection.get(
+        where={"$and": [{"file_hash": file_hash}, {"source": source}]},
+        limit=1,
+    )
 
-        print(f"{file.name} -> {len(pages)} pages\n\n")
+    return len(result["ids"]) > 0
 
-        chunks: list[dict] = chunk_pages(pages, size=800, overlap=150)
 
-        embeddings = embed([chunk["text"] for chunk in chunks], "document")
+def delete_source(collection: chromadb.Collection, source: str):
+    """
+    Delete all documents in the collection that match the given source.
 
-        add_chunks(chunks, embeddings, collection=collection)
+    Args:
+        collection (chromadb.Collection): The ChromaDB collection.
+         source (str): The source name of the documents to delete.
+    """
+    collection.delete(where={"source": source})
 
-        print(
-            f"{collection.count()} documents in collection after adding {len(chunks)} chunks from {file.name}.\n\n"
-        )
+
+def list_sources(collection: chromadb.Collection) -> set[str]:
+    """
+    List all unique sources in the collection.
+
+    Args:
+        collection (chromadb.Collection): The ChromaDB collection.
+
+    Returns:
+        set: A set of unique source names.
+    """
+    result = collection.get(include=["metadatas"])
+    sources = {
+        metadata["source"] for metadata in result["metadatas"] if "source" in metadata
+    }
+    return sources
