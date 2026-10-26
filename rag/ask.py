@@ -39,17 +39,42 @@ if __name__ == "__main__":
             )
             print(f"    {hit['text'][:200]!r}\n")
     else:
+        from highlight import find_best_sentence
+        from rich.console import Console
+        from rich.text import Text
+
+        console = Console()
         messages = build_messages(question, hits)
 
         answer = ""
         for piece in generate(messages):
-            print(piece, end="", flush=True)
             answer += piece
-
+            print(piece, end="", flush=True)
         print()
-        source_citations = sorted({int(n) for n in re.findall(r"\[(\d+)\]", answer) if 1 <= int(n) <= len(hits)})
 
-        if len(source_citations):
+        source_citations = sorted(
+            {
+                int(n)
+                for n in re.findall(r"\[(\d+)\]", answer)
+                if 1 <= int(n) <= len(hits)
+            }
+        )
+
+        if source_citations:
             print("\nSources:")
             for n in source_citations:
-                print(f"[{n}] {hits[n - 1]['source']}, {format_location(hits[n - 1])}")
+                hit = hits[n - 1]
+                print(f"[{n}] {hit['source']}, {format_location(hit)}")
+
+                match = find_best_sentence(answer, hit["text"])
+                if match:
+                    sentence, score = match
+
+                    start = hit["text"].find(sentence)
+                    snippet = Text(hit["text"][max(0, start - 150): start + len(sentence) + 150])
+
+
+                    snippet.highlight_words([sentence], style="bold yellow")
+                    
+                    console.print(snippet)
+                    print()

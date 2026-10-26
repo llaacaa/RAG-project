@@ -1,5 +1,8 @@
 import re
 
+SENTENCE_SPLIT = r"(?<=[.!?])\s+"
+
+
 def overlap_tail(previous_chunk: str, overlap: int) -> str:
     """Return the last `overlap` characters of a chunk, starting at a whole word."""
     if overlap <= 0 or not previous_chunk:
@@ -50,7 +53,7 @@ def split_text(text: str, size: int, overlap: int) -> list[str]:
     for paragraph in paragraphs:
         if len(paragraph) > size:
             # Handle long paragraphs by splitting them into sentences
-            sentences = re.split(r"(?<=[.!?])\s+", paragraph)
+            sentences = re.split(SENTENCE_SPLIT, paragraph)
             for sentence in sentences:
                 for split_sentence in hard_split(sentence, size):
                     current_text = process_chunk(current_text, split_sentence, size, overlap, chunks, " ")

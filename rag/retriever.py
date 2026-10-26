@@ -1,5 +1,6 @@
 import chromadb
 from embeddings import embed
+from store import get_collection
 
 
 def retrieve(
