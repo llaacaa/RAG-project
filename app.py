@@ -126,7 +126,7 @@ def build_sources(answer: str, hits: list[dict]) -> list[dict]:
     sources = []
     for n in cited:
         hit = hits[n - 1]
-        match = find_best_sentence(answer, hit["text"])
+        match = find_best_sentence(answer, hit["text"], n)
         sources.append(
             {
                 "n": n,

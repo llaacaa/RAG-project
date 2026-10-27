@@ -66,7 +66,7 @@ if __name__ == "__main__":
                 hit = hits[n - 1]
                 print(f"[{n}] {hit['source']}, {format_location(hit)}")
 
-                match = find_best_sentence(answer, hit["text"])
+                match = find_best_sentence(answer, hit["text"], n)
                 if match:
                     sentence, score = match
 
