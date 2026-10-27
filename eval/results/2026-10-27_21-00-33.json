@@ -1,0 +1,299 @@
+{
+  "settings": {
+    "label": "baseline",
+    "k": 5,
+    "chunk_size": 800,
+    "chunk_overlap": 150,
+    "embed_model": "nomic-embed-text",
+    "chat_model": null
+  },
+  "summary": {
+    "hit@5": 15,
+    "hit@1": 13,
+    "mrr": 0.806,
+    "answerable_questions": 17,
+    "avg_seconds": 0.12
+  },
+  "results": [
+    {
+      "question": "Are pets allowed?",
+      "answerable": true,
+      "retrieved_pages": [
+        34,
+        10,
+        34,
+        29,
+        36
+      ],
+      "best_distance": 0.272,
+      "rank": 1,
+      "seconds": 1.41
+    },
+    {
+      "question": "Can I bring my dog to the store?",
+      "answerable": true,
+      "retrieved_pages": [
+        34,
+        12,
+        10,
+        40,
+        38
+      ],
+      "best_distance": 0.348,
+      "rank": 1,
+      "seconds": 0.05
+    },
+    {
+      "question": "When does the lease end?",
+      "answerable": true,
+      "retrieved_pages": [
+        1,
+        2,
+        22,
+        22,
+        5
+      ],
+      "best_distance": 0.197,
+      "rank": 1,
+      "seconds": 0.05
+    },
+    {
+      "question": "What is the security deposit?",
+      "answerable": true,
+      "retrieved_pages": [
+        3,
+        10,
+        28,
+        29,
+        3
+      ],
+      "best_distance": 0.265,
+      "rank": 1,
+      "seconds": 0.05
+    },
+    {
+      "question": "How much is the monthly rent?",
+      "answerable": true,
+      "retrieved_pages": [
+        8,
+        9,
+        9,
+        9,
+        2
+      ],
+      "best_distance": 0.269,
+      "rank": 5,
+      "seconds": 0.05
+    },
+    {
+      "question": "What happens if I pay the rent late?",
+      "answerable": true,
+      "retrieved_pages": [
+        7,
+        7,
+        7,
+        22,
+        28
+      ],
+      "best_distance": 0.212,
+      "rank": 1,
+      "seconds": 0.05
+    },
+    {
+      "question": "Can the tenant sublet the premises?",
+      "answerable": true,
+      "retrieved_pages": [
+        12,
+        23,
+        10,
+        29,
+        12
+      ],
+      "best_distance": 0.229,
+      "rank": 2,
+      "seconds": 0.05
+    },
+    {
+      "question": "Who has to repair the structure of the building?",
+      "answerable": true,
+      "retrieved_pages": [
+        19,
+        19,
+        39,
+        20,
+        36
+      ],
+      "best_distance": 0.203,
+      "rank": 1,
+      "seconds": 0.05
+    },
+    {
+      "question": "What insurance does the tenant need to have?",
+      "answerable": true,
+      "retrieved_pages": [
+        15,
+        16,
+        17,
+        16,
+        17
+      ],
+      "best_distance": 0.184,
+      "rank": 1,
+      "seconds": 0.05
+    },
+    {
+      "question": "What counts as substantial damage to the premises?",
+      "answerable": true,
+      "retrieved_pages": [
+        22,
+        15,
+        36,
+        19,
+        22
+      ],
+      "best_distance": 0.17,
+      "rank": 1,
+      "seconds": 0.05
+    },
+    {
+      "question": "What happens if the government takes the property by eminent domain?",
+      "answerable": true,
+      "retrieved_pages": [
+        31,
+        28,
+        23,
+        23,
+        29
+      ],
+      "best_distance": 0.312,
+      "rank": null,
+      "seconds": 0.05
+    },
+    {
+      "question": "Am I allowed to change the locks?",
+      "answerable": true,
+      "retrieved_pages": [
+        14,
+        21,
+        20,
+        20,
+        12
+      ],
+      "best_distance": 0.398,
+      "rank": null,
+      "seconds": 0.05
+    },
+    {
+      "question": "Can I put up a sign in the window?",
+      "answerable": true,
+      "retrieved_pages": [
+        34,
+        12,
+        12,
+        12,
+        34
+      ],
+      "best_distance": 0.29,
+      "rank": 1,
+      "seconds": 0.05
+    },
+    {
+      "question": "What can the premises be used for?",
+      "answerable": true,
+      "retrieved_pages": [
+        10,
+        21,
+        29,
+        4,
+        6
+      ],
+      "best_distance": 0.235,
+      "rank": 1,
+      "seconds": 0.05
+    },
+    {
+      "question": "Which court handles legal disputes?",
+      "answerable": true,
+      "retrieved_pages": [
+        31,
+        31,
+        15,
+        7,
+        14
+      ],
+      "best_distance": 0.321,
+      "rank": 1,
+      "seconds": 0.05
+    },
+    {
+      "question": "What are the rules about hazardous materials?",
+      "answerable": true,
+      "retrieved_pages": [
+        15,
+        15,
+        14,
+        15,
+        10
+      ],
+      "best_distance": 0.214,
+      "rank": 1,
+      "seconds": 0.05
+    },
+    {
+      "question": "How do I send an official notice to the landlord?",
+      "answerable": true,
+      "retrieved_pages": [
+        29,
+        9,
+        12,
+        9,
+        29
+      ],
+      "best_distance": 0.301,
+      "rank": 1,
+      "seconds": 0.05
+    },
+    {
+      "question": "What is the capital of France?",
+      "answerable": false,
+      "retrieved_pages": [
+        31,
+        45,
+        31,
+        2,
+        1
+      ],
+      "best_distance": 0.437,
+      "rank": null,
+      "seconds": 0.05
+    },
+    {
+      "question": "How many bedrooms does the apartment have?",
+      "answerable": false,
+      "retrieved_pages": [
+        1,
+        29,
+        6,
+        23,
+        32
+      ],
+      "best_distance": 0.358,
+      "rank": null,
+      "seconds": 0.05
+    },
+    {
+      "question": "Who won the 2018 football World Cup?",
+      "answerable": false,
+      "retrieved_pages": [
+        31,
+        21,
+        31,
+        10,
+        10
+      ],
+      "best_distance": 0.532,
+      "rank": null,
+      "seconds": 0.05
+    }
+  ]
+}

@@ -1,0 +1,342 @@
+{
+  "settings": {
+    "label": "baseline",
+    "k": 5,
+    "chunk_size": 800,
+    "chunk_overlap": 150,
+    "embed_model": "nomic-embed-text",
+    "chat_model": "qwen2.5:3b"
+  },
+  "summary": {
+    "hit@5": 15,
+    "hit@1": 13,
+    "mrr": 0.806,
+    "answerable_questions": 17,
+    "answers_ok": 11,
+    "refused_correctly": 3,
+    "unanswerable_questions": 3,
+    "avg_seconds": 6.9
+  },
+  "results": [
+    {
+      "question": "Are pets allowed?",
+      "answerable": true,
+      "retrieved_pages": [
+        34,
+        10,
+        34,
+        29,
+        36
+      ],
+      "best_distance": 0.272,
+      "rank": 1,
+      "answer": "Service animals are allowed [3] and [5]. There is no explicit mention of pets, but the term \"pet\" is not used. [3] mentions \"No bird, fish or animal shall be brought into or kept in or about the Premises or the Building,\" which could be interpreted as pets are not allowed, unless they are service animals. [5] mentions \"Tenant shall permit service animals to the Premises,\" which is a specific case of pets. Therefore, based on the given information, pets are not allowed unless they are service animals.",
+      "answer_ok": true,
+      "seconds": 15.05
+    },
+    {
+      "question": "Can I bring my dog to the store?",
+      "answerable": true,
+      "retrieved_pages": [
+        34,
+        12,
+        10,
+        40,
+        38
+      ],
+      "best_distance": 0.348,
+      "rank": 1,
+      "answer": "I couldn't find that in your documents.",
+      "answer_ok": false,
+      "seconds": 3.74
+    },
+    {
+      "question": "When does the lease end?",
+      "answerable": true,
+      "retrieved_pages": [
+        1,
+        2,
+        22,
+        22,
+        5
+      ],
+      "best_distance": 0.197,
+      "rank": 1,
+      "answer": "The lease ends on the Termination Date, which is the date which is the number of months after the Rent Commencement Date as set forth as the Lease Term in the Lease Schedule; provided, however, that if the Rent Commencement Date is a date other than the first day of a month, the Termination Date shall be the last day of the month which is the number of months in the term (as set forth in the Lease Schedule) after the month in which the Rent Commencement falls, unless extended or earlier terminated pursuant to this Lease. [1]",
+      "answer_ok": true,
+      "seconds": 8.62
+    },
+    {
+      "question": "What is the security deposit?",
+      "answerable": true,
+      "retrieved_pages": [
+        3,
+        10,
+        28,
+        29,
+        3
+      ],
+      "best_distance": 0.265,
+      "rank": 1,
+      "answer": "[1] The Security Deposit is the sum set forth in the Lease Schedule, to be paid by Tenant concurrently with the Base Rent upon execution of the Lease.",
+      "answer_ok": true,
+      "seconds": 4.79
+    },
+    {
+      "question": "How much is the monthly rent?",
+      "answerable": true,
+      "retrieved_pages": [
+        8,
+        9,
+        9,
+        9,
+        2
+      ],
+      "best_distance": 0.269,
+      "rank": 5,
+      "answer": "I couldn't find that in your documents.",
+      "answer_ok": false,
+      "seconds": 4.28
+    },
+    {
+      "question": "What happens if I pay the rent late?",
+      "answerable": true,
+      "retrieved_pages": [
+        7,
+        7,
+        7,
+        22,
+        28
+      ],
+      "best_distance": 0.212,
+      "rank": 1,
+      "answer": "If the rent is not paid promptly when due, a late charge equal to five percent (5%) of the payment which remains due but unpaid is due on the day it is incurred and shall bear interest thereafter as hereinbelow provided. [1] Additionally, any payment that is not paid by the fifth (5th) day after such payment is due shall bear interest at the rate of twelve percent (12%) per annum. [2]",
+      "answer_ok": true,
+      "seconds": 7.98
+    },
+    {
+      "question": "Can the tenant sublet the premises?",
+      "answerable": true,
+      "retrieved_pages": [
+        12,
+        23,
+        10,
+        29,
+        12
+      ],
+      "best_distance": 0.229,
+      "rank": 2,
+      "answer": "[2]",
+      "answer_ok": false,
+      "seconds": 4.18
+    },
+    {
+      "question": "Who has to repair the structure of the building?",
+      "answerable": true,
+      "retrieved_pages": [
+        19,
+        19,
+        39,
+        20,
+        36
+      ],
+      "best_distance": 0.203,
+      "rank": 1,
+      "answer": "Landlord has to repair the structure of the building, including the exterior walls, load bearing elements, foundations, roofs, structural columns, and structural floors [1].",
+      "answer_ok": true,
+      "seconds": 5.51
+    },
+    {
+      "question": "What insurance does the tenant need to have?",
+      "answerable": true,
+      "retrieved_pages": [
+        15,
+        16,
+        17,
+        16,
+        17
+      ],
+      "best_distance": 0.184,
+      "rank": 1,
+      "answer": "[1] [3] [4] [5] Tenant needs to have Workers’ Compensation and Employer’s Liability Insurance, Commercial General Liability Insurance, Rent Continuation insurance, and Plate Glass coverage. The insurance policies must be endorsed to indicate that Tenant's obligations are covered up to the limits of such policies and that such policies shall not be invalid due to any act or omission by Landlord. The insurance companies must notify Landlord at least 30 days prior to any cancellation, reduction in coverage, changing types of coverage, or non-renewal of the insurance.",
+      "answer_ok": true,
+      "seconds": 8.97
+    },
+    {
+      "question": "What counts as substantial damage to the premises?",
+      "answerable": true,
+      "retrieved_pages": [
+        22,
+        15,
+        36,
+        19,
+        22
+      ],
+      "best_distance": 0.17,
+      "rank": 1,
+      "answer": "[1] \"Substantial Damage and Destruction\" means serious damage or destruction rendering unusable 33% or more of the rentable square feet of the Premises, the Food Court Common Area and/or the total square footage of the Building.",
+      "answer_ok": true,
+      "seconds": 5.74
+    },
+    {
+      "question": "What happens if the government takes the property by eminent domain?",
+      "answerable": true,
+      "retrieved_pages": [
+        31,
+        28,
+        23,
+        23,
+        29
+      ],
+      "best_distance": 0.312,
+      "rank": null,
+      "answer": "If the government takes the property by eminent domain, Landlord shall, in the exercise of reasonable diligence and its own cost, restore the Premises to its previous condition as nearly as is reasonable under the circumstances. [4] However, Landlord is not obligated to commence such restoration until it has received the entire Condemnation award and in no event shall Landlord be obligated to incur restoration expenses in an amount greater than such award, less costs, expenses and fees (including attorneys' fees and costs) incurred by Landlord in collecting such award. [4]",
+      "answer_ok": true,
+      "seconds": 9.0
+    },
+    {
+      "question": "Am I allowed to change the locks?",
+      "answerable": true,
+      "retrieved_pages": [
+        14,
+        21,
+        20,
+        20,
+        12
+      ],
+      "best_distance": 0.398,
+      "rank": null,
+      "answer": "I couldn't find that in your documents.",
+      "answer_ok": false,
+      "seconds": 5.36
+    },
+    {
+      "question": "Can I put up a sign in the window?",
+      "answerable": true,
+      "retrieved_pages": [
+        34,
+        12,
+        12,
+        12,
+        34
+      ],
+      "best_distance": 0.29,
+      "rank": 1,
+      "answer": "I couldn't find that in your documents.",
+      "answer_ok": false,
+      "seconds": 4.66
+    },
+    {
+      "question": "What can the premises be used for?",
+      "answerable": true,
+      "retrieved_pages": [
+        10,
+        21,
+        29,
+        4,
+        6
+      ],
+      "best_distance": 0.235,
+      "rank": 1,
+      "answer": "The Premises can be used for the sale of products not normally associated with such use, under the Permitted Name(s) (as defined in Section 1.9). [1]",
+      "answer_ok": false,
+      "seconds": 6.1
+    },
+    {
+      "question": "Which court handles legal disputes?",
+      "answerable": true,
+      "retrieved_pages": [
+        31,
+        31,
+        15,
+        7,
+        14
+      ],
+      "best_distance": 0.321,
+      "rank": 1,
+      "answer": "[1] [2] District Court for the state in which the Premises are located or any successor federal court having original jurisdiction.",
+      "answer_ok": true,
+      "seconds": 3.4
+    },
+    {
+      "question": "What are the rules about hazardous materials?",
+      "answerable": true,
+      "retrieved_pages": [
+        15,
+        15,
+        14,
+        15,
+        10
+      ],
+      "best_distance": 0.214,
+      "rank": 1,
+      "answer": "[Hazardous Materials] means and includes asbestos; \"oil, petroleum products and their by-products\"; \"hazardous substances\"; \"hazardous wastes\" or \"toxic substances,\" as those terms are used in Environmental Laws; or any substances or materials listed as hazardous or toxic in the United States Department of Transportation, or by the Environmental Protection Agency or any successor agency under any Environmental Laws. [1], [2]\n\nTenant warrants and agrees that Tenant shall not cause or permit any Hazardous Material to be brought upon, kept or used in or about the Premises by Tenant, its agents, employees, contractors or invitees. Tenant shall indemnify, defend and hold Landlord [9]. Hazardous Materials present in the soil or ground water or under the Premises or the Building generally. [2]\n\nTenant shall indemnify, defend and hold Landlord harmless from and against any and all claims, judgments, damages, penalties, fines, costs, liabilities or losses (including, without limitation, diminution in value of the Premises or the Building, damages for the loss or restriction on use of rentable or usable space or of any amenity of the Building or the Premises generally, damages from any adverse impact on marketing of space in the Building, and sums paid in settlement of claims, attorneys’ fees, consultant fees and expert fees) which arise during or after the Term as a result of such contamination. [4]\n\nTenant shall not cause or permit any Hazardous Material to be brought upon, kept or used in or about the Premises by Tenant, its agents, employees, contractors or invitees. Tenant shall indemnify, defend and hold Landlord harmless from and against any and all claims, judgments, damages, penalties, fines, costs, liabilities or losses (including, without limitation, diminution in value of the Premises or the Building, damages for the loss or restriction on use of rentable or usable space or of any amenity of the Building or the Premises generally, damages from any adverse impact on marketing of space in the Building, and sums paid in settlement of claims, attorneys’ fees, consultant fees and expert fees) which arise during or after the Term as a result of such contamination. [9]\n\n[1] and [2] provide specific definitions and regulations regarding Hazardous Materials, including asbestos, oil, petroleum products, hazardous substances, hazardous wastes, or toxic substances. Hazardous Materials are not to be brought upon, kept, or used in or about the Premises by Tenant, its agents, employees, contractors, or invitees. Tenant is also required to indemnify, defend, and hold Landlord harmless from any claims arising from such contamination.",
+      "answer_ok": true,
+      "seconds": 24.49
+    },
+    {
+      "question": "How do I send an official notice to the landlord?",
+      "answerable": true,
+      "retrieved_pages": [
+        29,
+        9,
+        12,
+        9,
+        29
+      ],
+      "best_distance": 0.301,
+      "rank": 1,
+      "answer": "[5] \"Any notice, demand, consent, approval, request or other communication or document to be provided hereunder to Landlord or Tenant shall be in writing, and shall be deemed to have been provided two (2) days following the date sent as certified mail in the United States mails, postage prepaid.\"",
+      "answer_ok": true,
+      "seconds": 6.26
+    },
+    {
+      "question": "What is the capital of France?",
+      "answerable": false,
+      "retrieved_pages": [
+        31,
+        45,
+        31,
+        2,
+        1
+      ],
+      "best_distance": 0.437,
+      "rank": null,
+      "answer": "I couldn't find that in your documents.",
+      "answer_ok": true,
+      "seconds": 3.3
+    },
+    {
+      "question": "How many bedrooms does the apartment have?",
+      "answerable": false,
+      "retrieved_pages": [
+        1,
+        29,
+        6,
+        23,
+        32
+      ],
+      "best_distance": 0.358,
+      "rank": null,
+      "answer": "I couldn't find that in your documents.",
+      "answer_ok": true,
+      "seconds": 3.61
+    },
+    {
+      "question": "Who won the 2018 football World Cup?",
+      "answerable": false,
+      "retrieved_pages": [
+        31,
+        21,
+        31,
+        10,
+        10
+      ],
+      "best_distance": 0.532,
+      "rank": null,
+      "answer": "I couldn't find that in your documents.",
+      "answer_ok": true,
+      "seconds": 3.05
+    }
+  ]
+}

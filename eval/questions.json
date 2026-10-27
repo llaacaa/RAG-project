@@ -1,0 +1,22 @@
+[
+  {"question": "Are pets allowed?", "expected_pages": [34], "answer_contains": ["animal"]},
+  {"question": "Can I bring my dog to the store?", "expected_pages": [34], "answer_contains": ["animal"]},
+  {"question": "When does the lease end?", "expected_pages": [1, 2], "answer_contains": ["Termination Date"]},
+  {"question": "What is the security deposit?", "expected_pages": [3, 10], "answer_contains": ["Lease Schedule"]},
+  {"question": "How much is the monthly rent?", "expected_pages": [2], "answer_contains": ["Lease Schedule"]},
+  {"question": "What happens if I pay the rent late?", "expected_pages": [7], "answer_contains": ["5%", "five percent"]},
+  {"question": "Can the tenant sublet the premises?", "expected_pages": [23, 24], "answer_contains": ["consent"]},
+  {"question": "Who has to repair the structure of the building?", "expected_pages": [19], "answer_contains": ["Landlord"]},
+  {"question": "What insurance does the tenant need to have?", "expected_pages": [15], "answer_contains": ["liability", "policy", "coverage"]},
+  {"question": "What counts as substantial damage to the premises?", "expected_pages": [22], "answer_contains": ["33%", "33 percent"]},
+  {"question": "What happens if the government takes the property by eminent domain?", "expected_pages": [22], "answer_contains": ["terminat", "condemn", "taking"]},
+  {"question": "Am I allowed to change the locks?", "expected_pages": [34], "answer_contains": ["lock"]},
+  {"question": "Can I put up a sign in the window?", "expected_pages": [34], "answer_contains": ["consent", "approv"]},
+  {"question": "What can the premises be used for?", "expected_pages": [3, 10], "answer_contains": ["retail", "Lease Schedule"]},
+  {"question": "Which court handles legal disputes?", "expected_pages": [31], "answer_contains": ["District Court"]},
+  {"question": "What are the rules about hazardous materials?", "expected_pages": [14, 15], "answer_contains": ["hazardous"]},
+  {"question": "How do I send an official notice to the landlord?", "expected_pages": [29, 30], "answer_contains": ["writing", "mail", "receipt"]},
+  {"question": "What is the capital of France?", "expected_pages": [], "answer_contains": ["couldn't find"]},
+  {"question": "How many bedrooms does the apartment have?", "expected_pages": [], "answer_contains": ["couldn't find"]},
+  {"question": "Who won the 2018 football World Cup?", "expected_pages": [], "answer_contains": ["couldn't find"]}
+]
